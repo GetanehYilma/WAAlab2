@@ -5,20 +5,19 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
 
-<!--  <servlet>-->
-<!--&lt;!&ndash;    <servlet-name>DispatcherServlet</servlet-name>&ndash;&gt;-->
-<!--&lt;!&ndash;    <servlet-class>edu.mum.cs.controller.CalculatorController</servlet-class>&ndash;&gt;-->
-<!--    <init-param>-->
-<!--      <param-name>configFile</param-name>-->
-<!--      <param-value>-->
-<!--        config.properties-->
-<!--      </param-value>-->
-<!--    </init-param>-->
-<!--  </servlet>-->
+  <servlet>
+    <servlet-name>DispatcherServlet</servlet-name>
+    <servlet-class>mum.edu.framework.DispatcherServlet</servlet-class>
+    <init-param>
+      <param-name>configFile</param-name>
+      <param-value>
+        config.properties
+      </param-value>
+    </init-param>
+  </servlet>
 
-
-<!--  <servlet-mapping>-->
-<!--    <servlet-name>DispatcherServlet</servlet-name>-->
-<!--    <url-pattern>/</url-pattern>-->
-<!--  </servlet-mapping>-->
+  <servlet-mapping>
+    <servlet-name>DispatcherServlet</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
 </web-app>

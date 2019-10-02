@@ -1,6 +1,4 @@
-package edu.mum.cs.validator;
-
-import edu.mum.cs.model.Calculator;
+package mum.edu.validator;
 
 import java.util.List;
 

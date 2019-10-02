@@ -1,14 +1,13 @@
-package edu.mum.cs.controller;
+package mum.edu.controller;
 
-import edu.mum.cs.model.Calculator;
-import edu.mum.cs.validator.CalculatorValidator;
 import mum.edu.framework.annotation.AutoWired;
 import mum.edu.framework.annotation.Controller;
 import mum.edu.framework.annotation.RequestMapping;
+import mum.edu.model.Calculator;
+import mum.edu.validator.CalculatorValidator;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.lang.annotation.Annotation;
 import java.util.List;
 
 @Controller
@@ -17,11 +16,12 @@ public class CalculatorController {
     @AutoWired
     CalculatorValidator calculatorValidator;
 
-    @RequestMapping(value = { "/", "/calculator" })
+    @RequestMapping(value = {"/", "/calculator" })
     public String formInput(HttpServletRequest request, HttpServletResponse response) {
         return "/WEB-INF/jsp/CalculatorForm.jsp";
     }
-    @RequestMapping(value = "/calcculate")
+
+    @RequestMapping(value = {"/calcculate"})
     public String calculateResult(Calculator calculator, HttpServletRequest request, HttpServletResponse response) {
         List<String> errors = calculatorValidator.validate(calculator);
         if (errors.isEmpty()) {
@@ -35,7 +35,5 @@ public class CalculatorController {
         }
     }
 
-    public Class<? extends Annotation> annotationType() {
-        return null;
-    }
+
 }

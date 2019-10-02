@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<form>
+<form action="calcculate" method="post">
     <input type="text" name="add1" size="2" value="${result.num1}"/>
     +
     <input type="text" name="add2" value="${result.num2}" size="2"/>

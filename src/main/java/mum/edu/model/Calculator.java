@@ -1,4 +1,4 @@
-package edu.mum.cs.model;
+package mum.edu.model;
 
 public class Calculator {
     private Integer num1;
